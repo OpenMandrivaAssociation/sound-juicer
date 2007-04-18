@@ -75,7 +75,7 @@ rsvg -w 48 -h 48 data/sound-juicer.svg $RPM_BUILD_ROOT%{_liconsdir}/sound-juicer
 rsvg -w 32 -h 32 data/sound-juicer.svg $RPM_BUILD_ROOT%{_iconsdir}/sound-juicer.png
 install -D -m 644 data/sound-juicer-16.png $RPM_BUILD_ROOT%{_miconsdir}/sound-juicer.png
 
-for omf in %buildroot%_datadir/omf/*/*-??.omf;do
+for omf in %buildroot%_datadir/omf/*/*-{??,??_??}.omf;do
 echo "%lang($(basename $omf|sed -e s/.*-// -e s/.omf//)) $(echo $omf|sed s!%buildroot!!)" >> %name.lang
 done
 
