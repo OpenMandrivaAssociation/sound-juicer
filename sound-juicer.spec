@@ -6,9 +6,6 @@ License: GPL
 Group: Sound
 URL: http://www.burtonini.com/blog/computers/sound-juicer
 Source0: http://ftp.gnome.org/pub/GNOME/sources/sound-juicer/%{name}-%{version}.tar.bz2
-Patch0: sound-juicer-2.16.3-utf8_error.patch
-#gw: http://bugzilla.gnome.org/show_bug.cgi?id=418717
-Patch1: sound-juicer-initialize-threading.patch
 BuildRoot: %{_tmppath}/%{name}-%{version}-%{release}-buildroot
 BuildRequires: librsvg
 BuildRequires: libmusicbrainz-devel >= 2.0.0
@@ -40,9 +37,6 @@ This is Sound Juicer, a CD ripping tool using GTK+ and GStreamer.
 
 %prep
 %setup -q
-%patch0 -p0 -b .utf8
-%patch1 -p0
-./autogen.sh
 
 %build
 
