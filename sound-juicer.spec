@@ -20,7 +20,6 @@ BuildRequires: libcddb-slave2-devel
 BuildRequires: gnome-doc-utils
 BuildRequires: perl-XML-Parser
 BuildRequires: taglib-devel
-BuildRequires: desktop-file-utils
 BuildRequires: gnome-common intltool
 Requires(post): scrollkeeper
 Requires(postun): scrollkeeper
@@ -50,24 +49,6 @@ rm -rf $RPM_BUILD_ROOT
 GCONF_DISABLE_MAKEFILE_SCHEMA_INSTALL=1 %makeinstall_std 
 
 %find_lang %{name} --with-gnome
-
-
-# menu entry
-mkdir -p $RPM_BUILD_ROOT%{_menudir}
-cat << EOF > $RPM_BUILD_ROOT%{_menudir}/%{name}
-?package(%{name}):\
-	needs="X11" \
-	section="Multimedia/Sound" \
-	title="Sound Juicer CD Ripper" \
-	longtitle="Rip music from your CDs" \
-	command="%{_bindir}/sound-juicer" \
-	icon="sound-juicer.png" \
-	startup_notify="true" xdg="true"
-EOF
-desktop-file-install --vendor="" \
-  --remove-category="Application" \
-  --add-category="X-MandrivaLinux-Multimedia-Sound" \
-  --dir $RPM_BUILD_ROOT%{_datadir}/applications $RPM_BUILD_ROOT%{_datadir}/applications/*
 
 # icons
 mkdir -p %buildroot%_liconsdir
@@ -106,7 +87,6 @@ rm -rf $RPM_BUILD_ROOT
 %{_datadir}/sound-juicer
 %_datadir/icons/hicolor/*/apps/sound-juicer.*
 %_mandir/man1/%name.1*
-%{_menudir}/*
 %{_liconsdir}/*.png
 %{_iconsdir}/*.png
 %{_miconsdir}/*.png
