@@ -6,6 +6,7 @@ License: GPL
 Group: Sound
 URL: http://www.burtonini.com/blog/computers/sound-juicer
 Source0: http://ftp.gnome.org/pub/GNOME/sources/sound-juicer/%{name}-%{version}.tar.bz2
+BuildRoot: %{_tmppath}/%{name}-%{version}-%{release}-buildroot
 BuildRequires: librsvg
 BuildRequires: libmusicbrainz-devel >= 2.0.0
 BuildRequires: libgnomeui2-devel
