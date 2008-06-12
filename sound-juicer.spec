@@ -65,19 +65,23 @@ done
 %clean
 rm -rf $RPM_BUILD_ROOT
 
+%if %mdkversion < 200900
 %post
 %post_install_gconf_schemas %name
 %{update_menus}
 %update_scrollkeeper
 %update_icon_cache hicolor
+%endif
 
 %preun
 %preun_uninstall_gconf_schemas %name
 
+%if %mdkversion < 200900
 %postun
 %{clean_menus}
 %clean_scrollkeeper
 %clean_icon_cache hicolor
+%endif
 
 %files -f %{name}.lang
 %defattr(-,root,root,-)
