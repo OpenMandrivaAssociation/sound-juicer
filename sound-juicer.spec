@@ -1,6 +1,6 @@
 Summary: CD ripping tool using GTK+ and GStreamer
 Name: sound-juicer
-Version: 2.23.0
+Version: 2.23.1
 Release: %mkrel 1
 License: GPLv2+
 Group: Sound
