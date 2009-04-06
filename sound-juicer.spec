@@ -11,6 +11,7 @@ Patch: sound-juicer-2.25.2-format-strings.patch
 # http://bugzilla.gnome.org/show_bug.cgi?id=563229
 Patch1: bug575820.patch
 #gw fix another crash in musicbrainz lookup
+#remove this in the next version, it has a different fix in svn
 #http://bugzilla.gnome.org/show_bug.cgi?id=578060
 Patch2: sound-juicer-fix-no-release-date-crash.patch
 BuildRoot: %{_tmppath}/%{name}-%{version}-%{release}-buildroot
