@@ -1,7 +1,7 @@
 Summary: CD ripping tool using GTK+ and GStreamer
 Name: sound-juicer
 Version: 2.28.2
-Release: %mkrel 1
+Release: %mkrel 2
 License: GPLv2+
 Group: Sound
 URL: http://www.burtonini.com/blog/computers/sound-juicer
@@ -16,7 +16,6 @@ BuildRequires: libcanberra-devel
 BuildRequires: libneon-devel
 BuildRequires: brasero-devel
 BuildRequires: gnome-media >= 2.13.7
-BuildRequires: libcdio-devel
 BuildRequires: scrollkeeper
 BuildRequires: hal-devel
 BuildRequires: libcddb-slave2-devel
