@@ -11,7 +11,7 @@ BuildRequires: librsvg
 BuildRequires: libmusicbrainz3-devel
 BuildRequires: gtk+2-devel
 BuildRequires: libgstreamer-plugins-base-devel >= 0.8
-BuildRequires: libcanberra-devel
+BuildRequires: libcanberra-gtk-devel
 BuildRequires: libneon-devel
 BuildRequires: brasero-devel
 BuildRequires: gnome-media >= 2.13.7
