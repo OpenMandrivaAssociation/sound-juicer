@@ -42,7 +42,7 @@ This is Sound Juicer, a CD ripping tool using GTK+ and GStreamer.
 %make
 
 %install
-rm -rf $RPM_BUILD_ROOT
+rm -rf %{buildroot}
 
 GCONF_DISABLE_MAKEFILE_SCHEMA_INSTALL=1 %makeinstall_std 
 
@@ -50,9 +50,9 @@ GCONF_DISABLE_MAKEFILE_SCHEMA_INSTALL=1 %makeinstall_std
 
 # icons
 mkdir -p %buildroot%_liconsdir
-rsvg -w 48 -h 48 data/sound-juicer.svg $RPM_BUILD_ROOT%{_liconsdir}/sound-juicer.png
-rsvg -w 32 -h 32 data/sound-juicer.svg $RPM_BUILD_ROOT%{_iconsdir}/sound-juicer.png
-install -D -m 644 data/sound-juicer-16.png $RPM_BUILD_ROOT%{_miconsdir}/sound-juicer.png
+rsvg -w 48 -h 48 data/sound-juicer.svg %{buildroot}%{_liconsdir}/sound-juicer.png
+rsvg -w 32 -h 32 data/sound-juicer.svg %{buildroot}%{_iconsdir}/sound-juicer.png
+install -D -m 644 data/sound-juicer-16.png %{buildroot}%{_miconsdir}/sound-juicer.png
 
 for omf in %buildroot%_datadir/omf/*/*-{??,??_??}.omf;do
 echo "%lang($(basename $omf|sed -e s/.*-// -e s/.omf//)) $(echo $omf|sed s!%buildroot!!)" >> %name.lang
@@ -60,7 +60,7 @@ done
 
 
 %clean
-rm -rf $RPM_BUILD_ROOT
+rm -rf %{buildroot}
 
 %if %mdkversion < 200900
 %post
