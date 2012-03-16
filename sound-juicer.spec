@@ -7,6 +7,7 @@ Group: Sound
 URL: http://www.burtonini.com/blog/computers/sound-juicer
 Source0: http://ftp.gnome.org/pub/GNOME/sources/sound-juicer/%{name}-%{version}.tar.xz
 
+BuildRequires:	intltool
 BuildRequires:	pkgconfig(gconf-2.0)
 BuildRequires:	pkgconfig(glib-2.0)
 BuildRequires:	pkgconfig(gnome-doc-utils)
@@ -36,7 +37,7 @@ This is Sound Juicer, a CD ripping tool using GTK+ and GStreamer.
 	--disable-scrollkeeper \
 	--disable-schemas-install
 
-%make
+%make LIBS='-ldbus-1'
 
 %install
 %makeinstall_std 
