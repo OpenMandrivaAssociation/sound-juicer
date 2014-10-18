@@ -16,6 +16,7 @@ BuildRequires:	pkgconfig(libmusicbrainz5)
 BuildRequires:	pkgconfig(gstreamer-1.0)
 BuildRequires:	pkgconfig(gstreamer-plugins-base-1.0)
 BuildRequires:	pkgconfig(gstreamer-pbutils-1.0)
+BuildRequires:  pkgconfig(gsettings-desktop-schemas)
 #for autogen.sh
 #BuildRequires:	gettext-devel
 #BuildRequires:	gnome-common
