@@ -16,6 +16,9 @@ BuildRequires:	pkgconfig(libmusicbrainz5)
 BuildRequires:	pkgconfig(gstreamer-1.0)
 BuildRequires:	pkgconfig(gstreamer-plugins-base-1.0)
 BuildRequires:	pkgconfig(gstreamer-pbutils-1.0)
+BuildRequires:	gstreamer1.0-plugins-good
+BuildRequires:	gstreamer1.0-plugins-base
+BuildRequires:	gstreamer1.0-flac
 #for autogen.sh
 #BuildRequires:	gettext-devel
 #BuildRequires:	gnome-common
@@ -23,7 +26,6 @@ BuildRequires:	pkgconfig(gstreamer-pbutils-1.0)
 Requires:	gstreamer1.0-plugins-bad
 Requires:	gstreamer1.0-plugins-good
 Requires:	gstreamer1.0-cdparanoia
-Suggests:	gstreamer1.0-vorbis
 Suggests:	gstreamer1.0-flac
 Suggests:	gstreamer1.0-lame
 Suggests:	gstreamer1.0-faac
