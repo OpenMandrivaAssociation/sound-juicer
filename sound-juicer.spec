@@ -12,6 +12,7 @@ BuildRequires:	itstool
 BuildRequires:	pkgconfig(glib-2.0)
 BuildRequires:	pkgconfig(gnome-doc-utils)
 BuildRequires:	pkgconfig(libbrasero-media3)
+BuildRequires:	pkgconfig(libdiscid)
 BuildRequires:	pkgconfig(libmusicbrainz5)
 BuildRequires:	pkgconfig(gstreamer-1.0)
 BuildRequires:	pkgconfig(gstreamer-plugins-base-1.0)
