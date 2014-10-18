@@ -19,6 +19,7 @@ BuildRequires:	pkgconfig(gstreamer-pbutils-1.0)
 BuildRequires:	gstreamer1.0-plugins-good
 BuildRequires:	gstreamer1.0-plugins-base
 BuildRequires:	gstreamer1.0-flac
+BuildRequires:  pkgconfig(gsettings-desktop-schemas)
 #for autogen.sh
 #BuildRequires:	gettext-devel
 #BuildRequires:	gnome-common
