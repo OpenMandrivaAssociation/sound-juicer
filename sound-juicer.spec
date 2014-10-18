@@ -42,7 +42,6 @@ This is Sound Juicer, a CD ripping tool using GTK+ and GStreamer.
 
 %build
 %configure \
-	--disable-schemas-install \
 	--enable-compile-warnings=no
 
 %make LIBS='-ldbus-1'
@@ -53,7 +52,6 @@ This is Sound Juicer, a CD ripping tool using GTK+ and GStreamer.
 
 %files -f %{name}.lang
 %doc README ChangeLog
-%{_sysconfdir}/gconf/schemas/sound-juicer.schemas
 %{_bindir}/*
 %{_datadir}/applications/*
 %{_datadir}/sound-juicer
