@@ -1,2 +1,5 @@
+removed_sources:
+  sound-juicer-3.14.0.tar.xz: 799fe57990f720fa26889890e5c484ba02ae7949
+  sound-juicer-3.4.0.tar.xz: b98e198f4a80daab1ed809f4effc6ec2858dd9cd
 sources:
-  "sound-juicer-3.4.0.tar.xz": b98e198f4a80daab1ed809f4effc6ec2858dd9cd
+  sound-juicer-3.16.1.tar.xz: 017da542d9dd8837f608c3e6ade0363825503d7e
