@@ -59,3 +59,4 @@ This is Sound Juicer, a CD ripping tool using GTK+ and GStreamer.
 %{_mandir}/man1/%{name}.1*
 %{_datadir}/GConf/gsettings/sound-juicer.convert
 %{_datadir}/glib-2.0/schemas/org.gnome.sound-juicer.gschema.xml
+%{_datadir}/appdata/sound-juicer.appdata.xml
