@@ -1,3 +1,5 @@
+%define _disable_rebuild_configure 1
+
 Summary:	CD ripping tool using GTK+ and GStreamer
 Name:		sound-juicer
 Version:	3.18.1
