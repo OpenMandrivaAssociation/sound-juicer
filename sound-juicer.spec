@@ -8,6 +8,7 @@ License:	GPLv2+
 Group:		Sound
 URL:		http://www.burtonini.com/blog/computers/sound-juicer
 Source0:	http://ftp.gnome.org/pub/GNOME/sources/sound-juicer/%{name}-%{version}.tar.xz
+Patch1:		sound-juicer-3.18.1-return_type.patch
 
 BuildRequires:	intltool
 BuildRequires:	iso-codes
@@ -41,6 +42,7 @@ This is Sound Juicer, a CD ripping tool using GTK+ and GStreamer.
 
 %prep
 %setup -q
+%apply_patches
 
 %build
 %configure \

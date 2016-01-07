@@ -1,0 +1,11 @@
+--- sound-juicer-3.18.1/libjuicer/sj-metadata-musicbrainz5.c.orig	2016-01-07 20:34:33.958318230 +0000
++++ sound-juicer-3.18.1/libjuicer/sj-metadata-musicbrainz5.c	2016-01-07 20:35:01.725320314 +0000
+@@ -757,7 +757,7 @@
+       if (*error != NULL) {
+         track_details_free (track);
+         g_list_free_full (tracks, (GDestroyNotify) track_details_free);
+-        return NULL;
++        return;
+       }
+ 
+       if (track->duration == 0)
