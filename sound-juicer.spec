@@ -25,9 +25,7 @@ BuildRequires:	gstreamer1.0-plugins-base
 BuildRequires:	gstreamer1.0-flac
 BuildRequires:	gstreamer-tools
 BuildRequires:  pkgconfig(gsettings-desktop-schemas)
-#for autogen.sh
-#BuildRequires:	gettext-devel
-#BuildRequires:	gnome-common
+BuildRequires:	meson
 
 Requires:	gstreamer1.0-plugins-bad
 Requires:	gstreamer1.0-plugins-good
