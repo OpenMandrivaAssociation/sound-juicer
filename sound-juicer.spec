@@ -10,7 +10,7 @@ URL:		http://www.burtonini.com/blog/computers/sound-juicer
 Source0:	http://ftp.gnome.org/pub/GNOME/sources/sound-juicer/3.38/%{name}-%{version}.tar.xz
 
 BuildRequires:	intltool
-BuildRequires:	iso-codes
+BuildRequires:	pkgconfig(iso-codes)
 BuildRequires:	itstool
 BuildRequires:	pkgconfig(glib-2.0)
 BuildRequires:	pkgconfig(gnome-doc-utils)
