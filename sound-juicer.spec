@@ -2,13 +2,12 @@
 
 Summary:	CD ripping tool using GTK+ and GStreamer
 Name:		sound-juicer
-Version:	3.18.1
+Version:	3.38.0
 Release:	1
 License:	GPLv2+
 Group:		Sound
 URL:		http://www.burtonini.com/blog/computers/sound-juicer
-Source0:	http://ftp.gnome.org/pub/GNOME/sources/sound-juicer/%{name}-%{version}.tar.xz
-Patch1:		sound-juicer-3.18.1-return_type.patch
+Source0:	http://ftp.gnome.org/pub/GNOME/sources/sound-juicer/3.38/%{name}-%{version}.tar.xz
 
 BuildRequires:	intltool
 BuildRequires:	iso-codes
@@ -45,22 +44,23 @@ This is Sound Juicer, a CD ripping tool using GTK+ and GStreamer.
 %autopatch -p1
 
 %build
-%configure \
-	--enable-compile-warnings=no
-
-%make LIBS='-ldbus-1'
+%meson
+%meson_build
 
 %install
-%makeinstall_std
+%meson_install
 %find_lang %{name} --with-gnome
 
+rm -Rf %{buildroot}%{_prefix}/doc/%{name}
+
 %files -f %{name}.lang
-%doc README ChangeLog
+%doc README.md NEWS
 %{_bindir}/*
 %{_datadir}/applications/*
 %{_datadir}/sound-juicer
-%{_datadir}/icons/hicolor/*/apps/sound-juicer.*
+%{_datadir}/icons/hicolor/*/apps/org.gnome.SoundJuicer.*
 %{_mandir}/man1/%{name}.1*
 %{_datadir}/GConf/gsettings/sound-juicer.convert
 %{_datadir}/glib-2.0/schemas/org.gnome.sound-juicer.gschema.xml
-%{_datadir}/appdata/sound-juicer.appdata.xml
+%{_datadir}/metainfo/*.xml
+%{_datadir}/dbus-1/services/org.gnome.SoundJuicer.service
