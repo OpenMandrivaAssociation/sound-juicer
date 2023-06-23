@@ -53,6 +53,8 @@ rm -Rf %{buildroot}%{_prefix}/doc/%{name}
 
 %files -f %{name}.lang
 %doc README.md NEWS
+%doc %{_datadir}/doc/sound-juicer/AUTHORS
+%doc %{_datadir}/doc/sound-juicer/COPYING
 %{_bindir}/*
 %{_datadir}/applications/*
 %{_datadir}/sound-juicer
