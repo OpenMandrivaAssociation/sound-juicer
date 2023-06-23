@@ -2,12 +2,12 @@
 
 Summary:	CD ripping tool using GTK+ and GStreamer
 Name:		sound-juicer
-Version:	3.38.0
+Version:	3.40.0
 Release:	1
 License:	GPLv2+
 Group:		Sound
 URL:		http://www.burtonini.com/blog/computers/sound-juicer
-Source0:	http://ftp.gnome.org/pub/GNOME/sources/sound-juicer/3.38/%{name}-%{version}.tar.xz
+Source0:	http://ftp.gnome.org/pub/GNOME/sources/sound-juicer/3.40/%{name}-%{version}.tar.xz
 
 BuildRequires:	intltool
 BuildRequires:	pkgconfig(iso-codes)
@@ -39,8 +39,7 @@ Suggests:	gstreamer1.0-faac
 This is Sound Juicer, a CD ripping tool using GTK+ and GStreamer.
 
 %prep
-%setup -q
-%autopatch -p1
+%autosetup -p1
 
 %build
 %meson
