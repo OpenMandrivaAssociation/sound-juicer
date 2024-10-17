@@ -6,7 +6,7 @@ Version:	3.40.0
 Release:	1
 License:	GPLv2+
 Group:		Sound
-URL:		http://www.burtonini.com/blog/computers/sound-juicer
+URL:		https://www.burtonini.com/blog/computers/sound-juicer
 Source0:	http://ftp.gnome.org/pub/GNOME/sources/sound-juicer/3.40/%{name}-%{version}.tar.xz
 
 BuildRequires:	intltool
